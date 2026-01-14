@@ -111,10 +111,11 @@
             background-color: var(--white);
         }
 
-        .video-item video {
+        .video-item iframe {
             width: 100%;
-            height: auto;
+            height: 400px;
             display: block;
+            border: none;
         }
 
         .video-caption {
@@ -208,6 +209,10 @@
 
             .video-gallery {
                 grid-template-columns: 1fr;
+            }
+
+            .video-item iframe {
+                height: 250px;
             }
         }
     </style>
@@ -328,10 +333,7 @@
                 </h2>
                 <div class="video-gallery">
                     <div class="video-item">
-                        <video controls muted>
-                            <source src="Face-Mask-Detection/Untitled video - Made with Clipchamp (8).mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe src="https://drive.google.com/file/d/1TC25pIBCSlQho5EImlKwebaeaqXlxIjb/preview" allow="autoplay" allowfullscreen></iframe>
                         <div class="video-caption">Face Mask Detection System Demo</div>
                     </div>
                 </div>
@@ -385,3 +387,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
