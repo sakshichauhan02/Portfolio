@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Mapping & Logistics Web App - Project Details | Sakshi Chauhan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-detail-page {
+            padding-top: 100px;
+            min-height: 100vh;
+            background-color: var(--white);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--purple-accent) 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .project-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        .project-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .project-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+
+        .project-header-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .header-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 24px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-link:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .project-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 4rem;
+        }
+
+        .content-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-heading {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--primary-purple);
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform 0.3s ease;
+            background-color: var(--white);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px var(--shadow-hover);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item-caption {
+            padding: 1rem;
+            background-color: var(--white);
+            color: var(--text-dark);
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .video-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow);
+            background-color: var(--white);
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-caption {
+            padding: 1rem;
+            background-color: var(--white);
+            color: var(--text-dark);
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .project-description {
+            background-color: var(--white-soft);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .project-description h3 {
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .project-description p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tech-item {
+            padding: 8px 16px;
+            background-color: var(--purple-light);
+            color: var(--primary-purple);
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px var(--shadow);
+            border-left: 4px solid var(--primary-purple);
+        }
+
+        .feature-item h4 {
+            color: var(--primary-purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2rem;
+            }
+
+            .project-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .image-gallery,
+            .video-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">Portfolio</a>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                    <li><a href="index.html#education" class="nav-link">Education</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="index.html#interests" class="nav-link">Interests</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Page -->
+    <div class="project-detail-page">
+        <!-- Project Header -->
+        <div class="project-header">
+            <div class="project-header-content">
+                <a href="index.html#projects" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+                <h1 class="project-title">Route Mapping & Logistics Web App</h1>
+                <p class="project-subtitle">A responsive logistics application for real-time route optimisation and supply chain efficiency</p>
+                <div class="project-header-links">
+                    <a href="https://github.com/sakshichauhan02/route-mapping" target="_blank" class="header-link">
+                        <i class="fab fa-github"></i> GitHub Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Content -->
+        <div class="project-content">
+            <!-- Project Description -->
+            <div class="content-section">
+                <div class="project-description">
+                    <h3>About This Project</h3>
+                    <p>
+                        A comprehensive Daily Commute Portal that helps users plan and optimize their daily routes. The application 
+                        provides real-time route visualization, commute history tracking, and efficient route planning using Google Maps API. 
+                        Built with a full-stack architecture, it features user authentication, route management, and an intuitive dashboard 
+                        for tracking commute patterns.
+                    </p>
+                    <p>
+                        The system includes both frontend and backend components, with a React.js frontend for interactive map visualization 
+                        and a Node.js backend for route management and user authentication. The application addresses real-world business needs 
+                        in supply chain optimization and logistics management.
+                    </p>
+                    
+                    <h3 style="margin-top: 2rem;">Tech Stack</h3>
+                    <div class="tech-stack">
+                        <span class="tech-item">React.js</span>
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">Express.js</span>
+                        <span class="tech-item">Google Maps API</span>
+                        <span class="tech-item">JavaScript</span>
+                        <span class="tech-item">HTML/CSS</span>
+                        <span class="tech-item">MongoDB</span>
+                    </div>
+
+                    <h3 style="margin-top: 2rem;">Key Features</h3>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <h4><i class="fas fa-map-marked-alt"></i> Route Visualization</h4>
+                            <p>Interactive map interface with real-time route planning and visualization using Google Maps API</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-user-shield"></i> User Authentication</h4>
+                            <p>Secure login/signup system with password management and session handling</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-history"></i> Commute History</h4>
+                            <p>Track and view past commute routes and patterns for better planning</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-route"></i> Route Optimization</h4>
+                            <p>Efficient route planning and optimization for supply chain management</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-tachometer-alt"></i> Dashboard</h4>
+                            <p>Comprehensive dashboard for viewing commute statistics and route analytics</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-mobile-alt"></i> Responsive Design</h4>
+                            <p>Fully responsive web application that works seamlessly on all devices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screenshots Gallery -->
+            <div class="content-section">
+                <h2 class="section-heading">
+                    <i class="fas fa-images"></i> Screenshots
+                </h2>
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="Rout-Mapping/Commute Dashboard.png" alt="Commute Dashboard">
+                        <div class="gallery-item-caption">Commute Dashboard</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Rout-Mapping/History.png" alt="History View">
+                        <div class="gallery-item-caption">History View</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Rout-Mapping/Interface.png" alt="Application Interface">
+                        <div class="gallery-item-caption">Application Interface</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Videos Section -->
+            <div class="content-section">
+                <h2 class="section-heading">
+                    <i class="fas fa-video"></i> Demo Video
+                </h2>
+                <div class="video-gallery">
+                    <div class="video-item">
+                        <video controls muted>
+                            <source src="Rout-Mapping/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-caption">Route Mapping & Logistics Web App Demo</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentation Section -->
+            <div class="content-section">
+                <h2 class="section-heading">
+                    <i class="fas fa-file-pdf"></i> Documentation
+                </h2>
+                <div class="project-description">
+                    <a href="Rout-Mapping/Daily Commute portal (1) (1).pdf" target="_blank" class="header-link" style="display: inline-flex; margin-top: 1rem;">
+                        <i class="fas fa-file-pdf"></i> View Project Documentation (PDF)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links Section -->
+            <div class="content-section">
+                <h2 class="section-heading">
+                    <i class="fas fa-link"></i> Project Links
+                </h2>
+                <div class="project-description">
+                    <div class="project-header-links" style="justify-content: center;">
+                        <a href="https://github.com/sakshichauhan02/route-mapping" target="_blank" class="header-link" style="background-color: var(--text-dark);">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sakshi Chauhan. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/sakshichauhan02" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/sakshi-chauhan-704973326" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sakshichauhan64771@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

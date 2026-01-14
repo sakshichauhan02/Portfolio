@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakshi Chauhan - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="#home">Portfolio</a>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#interests" class="nav-link">Interests</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight">Sakshi Chauhan</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Solution Architect & AI Engineer</h2>
+                    <p class="hero-description">
+                        Aspiring Solution Architect with a strong background in software engineering and AI-driven systems. 
+                        Experienced in designing scalable architectures, automating workflows, and translating business requirements into technical solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/sakshichauhan02" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/sakshi-chauhan-704973326" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:sakshichauhan64771@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/profile.png" alt="Sakshi Chauhan - Portfolio" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm passionate about building intelligent systems that scale. From AI-powered applications to backend architecture and workflow automation, 
+                        I focus on designing solutions that are efficient, adaptable, and business-aligned. I love turning complex requirements into elegant 
+                        architectures that work seamlessly in the real world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="CRM/Dashboard.png" alt="CRM Dashboard" class="project-img">
+                        <div class="project-overlay">
+                            <a href="crm-dashboard.html" class="project-link" title="View Details"><i class="fas fa-eye"></i></a>
+                            <a href="https://crm-dashboard-wq7q.vercel.app/" target="_blank" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/sakshichauhan02/CRM-dashboard" target="_blank" class="project-link" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CRM Dashboard with AI Chatbot</h3>
+                        <p>A complete, production-ready CRM Dashboard built with Next.js, TypeScript, Prisma, and PostgreSQL. Features include authentication, role-based access, lead/customer management, deal pipeline, task management, activity logging, and comprehensive reports with analytics.</p>
+                        <div class="project-links">
+                            <a href="crm-dashboard.html" class="project-external-link">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </a>
+                            <a href="https://crm-dashboard-wq7q.vercel.app/" target="_blank" class="project-external-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/sakshichauhan02/CRM-dashboard" target="_blank" class="project-external-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Prisma</span>
+                            <span class="tag">AI Chatbot</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Smart Car Parking(IOT)/System Overview.jpeg" alt="Smart Parking System" class="project-img">
+                        <div class="project-overlay">
+                            <a href="smart-parking.html" class="project-link" title="View Details"><i class="fas fa-eye"></i></a>
+                            <a href="https://github.com/sakshichauhan02/Smart_Parking" target="_blank" class="project-link" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Smart Parking System - IoT</h3>
+                        <p>Built an IoT-based parking solution integrating Arduino sensors with a web interface to display real-time slot availability.</p>
+                        <div class="project-links">
+                            <a href="smart-parking.html" class="project-external-link">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </a>
+                            <a href="https://github.com/sakshichauhan02/Smart_Parking" target="_blank" class="project-external-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Arduino</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">HTML/CSS/JS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Rout-Mapping/Interface.png" alt="Route Mapping" class="project-img">
+                        <div class="project-overlay">
+                            <a href="route-mapping.html" class="project-link" title="View Details"><i class="fas fa-eye"></i></a>
+                            <a href="https://github.com/sakshichauhan02/route-mapping" target="_blank" class="project-link" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Route Mapping & Logistics Web App</h3>
+                        <p>Created a responsive logistics application for real-time route optimisation and supply chain efficiency using React.js and Google Maps API.</p>
+                        <div class="project-links">
+                            <a href="route-mapping.html" class="project-external-link">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </a>
+                            <a href="https://github.com/sakshichauhan02/route-mapping" target="_blank" class="project-external-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">React.js</span>
+                            <span class="tag">Google Maps API</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-mask"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="face-mask-detection.html" class="project-link" title="View Details"><i class="fas fa-eye"></i></a>
+                            <a href="https://github.com/sakshichauhan02/Face-Mask" target="_blank" class="project-link" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Face Mask Detection System</h3>
+                        <p>Implemented a CNN-based model using a Kaggle dataset, achieving 95% accuracy in mask detection using Python, TensorFlow, and OpenCV.</p>
+                        <div class="project-links">
+                            <a href="face-mask-detection.html" class="project-external-link">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </a>
+                            <a href="https://github.com/sakshichauhan02/Face-Mask" target="_blank" class="project-external-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3>Programming</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>AI / ML</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>CNNs</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-language"></i>
+                            <span>NLP Basics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Data & Analytics</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Data Analysis</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-table"></i>
+                            <span>Pandas/NumPy</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Visualisation</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Architecture & Design</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>System Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>SDLC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Automation & Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-robot"></i>
+                            <span>Codex</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-magic"></i>
+                            <span>Loveable</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>Cursor AI</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Framer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Documentation</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>SRS/BRD/FRD</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-file-contract"></i>
+                            <span>Project Charters</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-book"></i>
+                            <span>Technical Docs</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-drafting-compass"></i>
+                            <span>Architecture Docs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="interests">
+        <div class="container">
+            <h2 class="section-title">Personal Interests & Hobbies</h2>
+            <div class="interests-content">
+                <div class="interests-grid">
+                    <div class="interest-item">
+                        <i class="fas fa-sitemap"></i>
+                        <h3>Architecture & Design</h3>
+                        <ul>
+                            <li>Exploring system design patterns and scalable architecture solutions</li>
+                            <li>Creating architecture diagrams and high-level/low-level designs</li>
+                            <li>Analyzing real-world systems and their design trade-offs</li>
+                        </ul>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI Tool Experimentation</h3>
+                        <ul>
+                            <li>Experimenting with AI-powered development tools (Cursor AI, Codex)</li>
+                            <li>Exploring no-code/low-code platforms for rapid prototyping</li>
+                            <li>Building AI-powered applications and automation tools</li>
+                        </ul>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-code"></i>
+                        <h3>Side Projects & Building</h3>
+                        <ul>
+                            <li>Developing CRM systems and business automation tools</li>
+                            <li>Building AI-powered applications for real-world problems</li>
+                            <li>Creating scalable web applications with modern tech stacks</li>
+                        </ul>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-microchip"></i>
+                        <h3>IoT & Smart Systems</h3>
+                        <ul>
+                            <li>Working with Arduino and sensor-based automation</li>
+                            <li>Building IoT solutions for smart parking and monitoring systems</li>
+                            <li>Integrating hardware with web interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud & Backend Learning</h3>
+                        <ul>
+                            <li>Learning scalable cloud architectures and integrations</li>
+                            <li>Exploring backend systems and API design patterns</li>
+                            <li>Understanding distributed systems and microservices</li>
+                        </ul>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-book-reader"></i>
+                        <h3>Continuous Learning</h3>
+                        <ul>
+                            <li>Staying updated with AI, cloud, and system design trends</li>
+                            <li>Reading technical documentation and architecture patterns</li>
+                            <li>Following industry best practices and emerging technologies</li>
+                        </ul>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Technical Documentation</h3>
+                        <ul>
+                            <li>Creating SRS, FRD, and architecture documentation</li>
+                            <li>Designing clear technical specifications and diagrams</li>
+                            <li>Documenting system designs and solution architectures</li>
+                        </ul>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Problem Solving</h3>
+                        <ul>
+                            <li>Translating business requirements into technical solutions</li>
+                            <li>Solving complex architectural challenges</li>
+                            <li>Designing efficient and scalable enterprise solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-content">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>AI Engineer</h3>
+                        <span class="experience-company">Astrenox Technologies</span>
+                        <span class="experience-date">June 2025 – July 2025</span>
+                    </div>
+                    <p class="experience-location">Gurugram, India</p>
+                    <ul class="experience-duties">
+                        <li>Automated workflows and supported backend architecture for low-code AI tools.</li>
+                        <li>Designed processes for efficient data integration, improving operational efficiency.</li>
+                        <li>Collaborated with teams to align solutions with business needs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-content">
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>Master of Computer Application (Machine Learning and AI)</h3>
+                        <span class="education-date">Expected 2026</span>
+                    </div>
+                    <p class="education-institution">University Of Petroleum and Energy Studies, Dehradun, India</p>
+                    <p class="education-status">Pursuing</p>
+                </div>
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>Bachelor of Computer Science</h3>
+                        <span class="education-date">2021 - 2024</span>
+                    </div>
+                    <p class="education-institution">Hemvati Nandan Bahuguna Garhwal University, Haridwar, India</p>
+                    <p class="education-status">Completed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2 class="section-title">Certificates</h2>
+            <div class="certificates-content">
+                <div class="certificate-item">
+                    <i class="fas fa-certificate"></i>
+                    <div>
+                        <h3>Deloitte Virtual Internship - Technology</h3>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <i class="fas fa-certificate"></i>
+                    <div>
+                        <h3>Cloud Computing - Simplilearn</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>
+                        I'm always open to discussing new projects, creative ideas,
+                        or opportunities to be part of your visions.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:sakshichauhan64771@gmail.com">sakshichauhan64771@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+917017400147">(+91)-7017400147</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>India</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p><a href="https://github.com/sakshichauhan02" target="_blank">github.com/sakshichauhan02</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p><a href="https://linkedin.com/in/sakshi-chauhan-704973326" target="_blank">linkedin.com/in/sakshi-chauhan-704973326</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sakshi Chauhan. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/sakshichauhan02" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/sakshi-chauhan-704973326" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sakshichauhan64771@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
